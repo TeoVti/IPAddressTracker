@@ -1,0 +1,158 @@
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+}
+
+.top-background {
+  height: 40vh;
+  background-image: url("../src/assets/pattern-bg-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.map {
+  height: 60vh;
+  position: relative;
+}
+
+.front-info {
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.title {
+  font-family: "Rubik";
+  font-size: 2rem;
+  color: white;
+}
+
+input,
+input::placeholder {
+  font-size: 0.9rem;
+}
+
+input,
+input:focus-visible {
+  outline: none;
+}
+
+.search-button,
+button:focus,
+button:focus-visible {
+  outline: none !important;
+}
+
+input {
+  height: 50px;
+  width: 69%;
+  border: none;
+  border-radius: 12px 0 0 12px;
+  padding-left: 20px;
+  font-family: "Rubik";
+  font-size: 1.125rem;
+}
+
+.search-button {
+  background-color: black !important;
+  background: url("../src/assets/icon-arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  width: 56px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  width: 76%;
+  min-height: 10vh;
+  margin: auto;
+  background-color: white;
+  border: none;
+  border-radius: 12px 12px 12px 12px;
+  margin-top: 32px;
+  padding: 0 25px 25px 25px;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #858585;
+  text-transform: uppercase;
+  margin-top: 22px;
+}
+
+.info {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.gm-style-mtc {
+  display: none;
+}
+
+.gm-control-active.gm-fullscreen-control {
+  display: none;
+}
+
+.gm-svpc {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  input {
+    max-width: 414px;
+  }
+
+  .top-background {
+    background-image: url("../src/assets/pattern-bg-desktop.png");
+  }
+
+  input,
+  input::placeholder {
+    font-size: 1.125rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1000px;
+  }
+
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-right: 1px solid #dbdbdb;
+    padding-right: 3%;
+    margin-top: 2%;
+  }
+  .info-section:last-child {
+    border: none;
+  }
+
+  .search-button {
+    cursor: pointer;
+  }
+}
